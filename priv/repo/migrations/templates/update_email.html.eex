@@ -1,0 +1,29 @@
+<div :for{trade <- @trades}>
+  <h3 style="text-transform: uppercase;">
+    <%= trade.tx_type %>
+  </h3>
+
+  <ul>
+    <li>
+      <span style="text-transform: uppercase;">
+        <%= trade.asset_ticker %>
+      </span>
+    </li>
+    <li>
+      <span style="font-family: bold;">
+        $<%= trade.value %>
+      </span>:
+      <span>
+        <%= trade.size %> shares at <%= trade.price %> each.</span>
+    </li>
+    <li>
+      <%= trade.politician_first_name %> <%= trade.politician_last_name %>
+    </li>
+      <span style="text-transform: uppercase;">
+        <%= trade.politician_party %> <%= trade.politician_state_id %>
+      </span>
+    <li>
+      <%= trade.politician_chamber %>
+    </li>
+  </ul>
+</div>
